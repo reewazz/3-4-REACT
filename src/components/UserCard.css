@@ -1,0 +1,77 @@
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
+/* Card: everything stays inside it */
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  min-width: 0;            /* lets the card shrink inside the grid cell */
+  padding: 16px;           /* padding on the card, not on the children */
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;        /* clips anything that tries to escape */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+.card *,
+.card *::before,
+.card *::after {
+  box-sizing: border-box;
+}
+
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Image at the top, inside the card padding */
+.card img {
+  order: -1;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+
+.card h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  overflow-wrap: anywhere; /* long names wrap instead of overflowing */
+}
+
+
+.card h3 {
+  font-size: 1.25rem;
+  color: #16a34a;
+  margin: 0;
+}
+
+
+.card p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
