@@ -1,4 +1,5 @@
 function ProductCard({item}){
+    console.log(item,"myitem")
     return (
         <>
          <div className="card">
