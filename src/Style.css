@@ -1,3 +1,8 @@
 .heading{
     color: red;
 }
+
+.cards:hover {
+    background: black;
+    color: white;
+}

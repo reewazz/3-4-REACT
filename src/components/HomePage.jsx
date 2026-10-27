@@ -1,7 +1,12 @@
 function HomePage () {
     return (
-        <>
-        This is homepage</>
+        <div className="flex justify-center h-screen items-center">
+      <div className="md:bg-blue-500 h-96 w-[100vw] bg-green-400" >
+
+      </div>
+      
+      
+      </div>
     )
 }
 

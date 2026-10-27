@@ -12,6 +12,10 @@ import { products } from "./components/Products";
 import PropsShow from "./components/PropsShow";
 import UserCard from "./components/UserCard";
 import Netflix from "./pages/Netflix";
+import ProductGrid from "./components/ProductsGrids";
+import Counter from "./components/Counter";
+import StateBasics from "./components/StateBasics";
+import Todolist from "./components/Todolist";
 
 function App() {
   const users = [
@@ -59,11 +63,14 @@ function App() {
 
 
       <Routes>
-        <Route index element={<HomePage />} />
+        <Route index element={<ProductGrid />} />
         <Route path="athena" element={<Athena />} />
         <Route path="cards" element={<PropsShow />} />
         <Route path="services" element={<Athena />} />
         <Route path="netflix" element={<Netflix />} />
+        <Route path="counter" element={<Counter />} />
+        <Route path="state" element={<StateBasics />} />
+        <Route path="todo" element={<Todolist />} />
         {/* <Route path="jpt" element={<h1>Jpt ko page</h1>} /> */}
         <Route path="*" element= {<h1>Page not found</h1>}/>
       </Routes>
