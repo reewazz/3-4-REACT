@@ -54,7 +54,7 @@ export default function ProductGrid() {
   };
 
   const [showForm,setShowForm] = useState(false)
-  const [products,setProducts] = useState([
+  const [products,setProducts] = useState([ 
   {
     id: 1,
     name: "Running Sneakers",
@@ -99,6 +99,182 @@ export default function ProductGrid() {
     image:
       "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=600&q=80",
   },
+  {
+  id: 5,
+  name: "Leather Casual Shoes",
+  category: "Footwear",
+  price: 89.99,
+  oldPrice: 109.99,
+  rating: 4.5,
+  reviews: 76,
+  image:
+    "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80",
+},
+{
+  id: 6,
+  name: "Sport Running Shoes",
+  category: "Footwear",
+  price: 69.99,
+  oldPrice: 89.99,
+  rating: 4.7,
+  reviews: 143,
+  image:
+    "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=600&q=80",
+},
+{
+  id: 7,
+  name: "Leather Handbag",
+  category: "Accessories",
+  price: 89.00,
+  oldPrice: 119.00,
+  rating: 4.8,
+  reviews: 112,
+  image:
+    "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80",
+},
+{
+  id: 8,
+  name: "Stylish Sunglasses",
+  category: "Accessories",
+  price: 34.99,
+  oldPrice: 49.99,
+  rating: 4.4,
+  reviews: 65,
+  image:
+    "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80",
+},
+{
+  id: 9,
+  name: "Bluetooth Speaker",
+  category: "Electronics",
+  price: 49.99,
+  oldPrice: 69.99,
+  rating: 4.6,
+  reviews: 189,
+  image:
+    "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80",
+},
+{
+  id: 10,
+  name: "Wireless Earbuds",
+  category: "Electronics",
+  price: 39.99,
+  oldPrice: 59.99,
+  rating: 4.7,
+  reviews: 156,
+  image:
+    "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=600&q=80",
+},
+{
+  id: 11,
+  name: "Hydrating Face Serum",
+  category: "Skincare",
+  price: 19.99,
+  oldPrice: 27.99,
+  rating: 4.8,
+  reviews: 134,
+  image:
+    "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=600&q=80",
+},
+{
+  id: 12,
+  name: "Vitamin C Face Wash",
+  category: "Skincare",
+  price: 14.99,
+  oldPrice: 19.99,
+  rating: 4.5,
+  reviews: 91,
+  image:
+    "https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=600&q=80",
+},
+{
+  id: 13,
+  name: "Cotton Casual T-Shirt",
+  category: "Clothing",
+  price: 19.99,
+  oldPrice: 29.99,
+  rating: 4.6,
+  reviews: 178,
+  image:
+    "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
+},
+{
+  id: 14,
+  name: "Classic Denim Jacket",
+  category: "Clothing",
+  price: 59.99,
+  oldPrice: 79.99,
+  rating: 4.7,
+  reviews: 102,
+  image:
+    "https://images.unsplash.com/photo-1543076447-215ad9ba6923?auto=format&fit=crop&w=600&q=80",
+},
+{
+  id: 15,
+  name: "Modern Table Lamp",
+  category: "Home Decor",
+  price: 39.99,
+  oldPrice: 54.99,
+  rating: 4.5,
+  reviews: 83,
+  image:
+    "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80",
+},
+{
+  id: 16,
+  name: "Decorative Flower Vase",
+  category: "Home Decor",
+  price: 24.99,
+  oldPrice: 34.99,
+  rating: 4.6,
+  reviews: 72,
+  image:
+    "https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&fit=crop&w=600&q=80",
+},
+{
+  id: 17,
+  name: "Travel Backpack",
+  category: "Bags",
+  price: 44.99,
+  oldPrice: 59.99,
+  rating: 4.7,
+  reviews: 145,
+  image:
+    "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80",
+},
+{
+  id: 18,
+  name: "Elegant Shoulder Bag",
+  category: "Bags",
+  price: 54.99,
+  oldPrice: 74.99,
+  rating: 4.8,
+  reviews: 119,
+  image:
+    "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80",
+},
+{
+  id: 19,
+  name: "Ceramic Coffee Mug",
+  category: "Kitchen",
+  price: 12.99,
+  oldPrice: 17.99,
+  rating: 4.5,
+  reviews: 64,
+  image:
+    "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=600&q=80",
+},
+{
+  id: 20,
+  name: "Insulated Water Bottle",
+  category: "Kitchen",
+  price: 18.99,
+  oldPrice: 24.99,
+  rating: 4.7,
+  reviews: 98,
+  image:
+    "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=80",
+},
 ]
 )
   const [name, setName] = useState("");
@@ -106,6 +282,12 @@ export default function ProductGrid() {
   const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
   
+
+  const categories = products.map((item)=>item.category)
+  const unique = ["All",...new Set(categories)]
+
+  console.log(unique,"cat")
+
   const [editingIndex, setEditingIndex] = useState(null);
 
   const addProduct= () => {
@@ -147,6 +329,14 @@ export default function ProductGrid() {
 
   console.log(products)
 
+ 
+
+  
+  
+  
+  const [selectedCategory,setSelectedCategory] = useState("All")
+
+  const filteredProducts = selectedCategory ==="All" ?products : products.filter((item,index)=>item.category===selectedCategory)
 
   return (
     <section className="min-h-screen bg-gray-100 p-8">
@@ -157,11 +347,20 @@ export default function ProductGrid() {
         </h1>
         <button onClick={()=>setShowForm(true)} className="bg-blue-400 px-4 py-1 font-semibold text-white rounded-sm">Add Product</button>
       </div>
+
+      <div className="py-4 flex gap-4">
+       
+
+        {unique.map((item,index)=>(
+          <button onClick={()=>setSelectedCategory(item)}  className={`${item===selectedCategory ? "bg-black" : "bg-blue-400"}    px-4 py-1 font-semibold text-white rounded-sm`} >{item}</button>
+        ))}
+
+      </div>
    
       
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {products.map((product) => (
+        <div className="grid  grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {filteredProducts.map((product) => (
             <ProductCard
               key={product.id}
               product={product}
