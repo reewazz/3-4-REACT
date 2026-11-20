@@ -16,6 +16,8 @@ import ProductGrid from "./components/ProductsGrids";
 import Counter from "./components/Counter";
 import StateBasics from "./components/StateBasics";
 import Todolist from "./components/Todolist";
+import ApiProducts from "./pages/ApiProducts";
+import Blogs from "./pages/Blogs";
 
 function App() {
   const users = [
@@ -71,6 +73,8 @@ function App() {
         <Route path="counter" element={<Counter />} />
         <Route path="state" element={<StateBasics />} />
         <Route path="todo" element={<Todolist />} />
+        <Route path="api" element={<ApiProducts />} />
+        <Route path="blogs" element={<Blogs />} />
         {/* <Route path="jpt" element={<h1>Jpt ko page</h1>} /> */}
         <Route path="*" element= {<h1>Page not found</h1>}/>
       </Routes>
