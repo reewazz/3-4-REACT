@@ -1,64 +1,25 @@
 
 import { Edit2, Trash2 } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Blogs = () => {
-  const [blogs, setBlogs] = useState([
-    {
-      id: 1,
-      image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643',
-      title: 'The Future of Web Development',
-      category: 'Technology',
-      description: 'Explore the latest trends and technologies shaping the future of web development.',
-      author: 'John Doe',
-      publishDate: '2026-01-15'
-    },
-    {
-      id: 2,
-      image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72',
-      title: 'Working Remotely',
-      category: 'Lifestyle',
-      description: 'Discover practical tips to improve productivity.',
-      author: 'Jane Smith',
-      publishDate: '2026-02-10'
-    },
-    {
-      id: 3,
-      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
-      title: 'Understanding AI',
-      category: 'Technology',
-      description: 'An introduction to artificial intelligence.',
-      author: 'Alex Johnson',
-      publishDate: '2026-03-05'
-    },
-    {
-      id: 4,
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-      title: 'Essential Developer Skills',
-      category: 'Programming',
-      description: 'Learn essential skills for becoming a developer.',
-      author: 'Michael Brown',
-      publishDate: '2026-04-12'
-    },
-    {
-      id: 5,
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f',
-      title: 'Digital Marketing Strategies',
-      category: 'Marketing',
-      description: 'Explore effective digital marketing strategies.',
-      author: 'Sarah Wilson',
-      publishDate: '2026-05-20'
-    }
-  ])
+    const blogfromlocal = JSON.parse(localStorage.getItem("blogData")) || []
 
+  const [blogs, setBlogs] = useState(blogfromlocal)
 
     const userValue = {
         name : "amosh",
         address : "balaju"
     }
+
+
+useEffect(()=> {
 localStorage.setItem("name","riwaj")
 localStorage.setItem("address","lagankhel")
 localStorage.setItem("user",JSON.stringify(userValue))
+  localStorage.setItem("blogData",JSON.stringify(blogs))
+},[])
+
 
   // Form State
   const [formData, setFormData] = useState({
@@ -299,7 +260,7 @@ else {
 
       {/* Display Blogs */}
       <div className='grid grid-cols-4 gap-4'>
-        {blogs.map((blog) => (
+        {blogs?.map((blog) => (
           <div className='border border-gray-200 rounded-sm p-4' key={blog.id}>
             <img
               src={blog.image}

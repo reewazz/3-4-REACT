@@ -18,6 +18,7 @@ import StateBasics from "./components/StateBasics";
 import Todolist from "./components/Todolist";
 import ApiProducts from "./pages/ApiProducts";
 import Blogs from "./pages/Blogs";
+import News from "./pages/News";
 
 function App() {
   const users = [
@@ -60,7 +61,7 @@ function App() {
 
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
 
 
 
@@ -75,6 +76,7 @@ function App() {
         <Route path="todo" element={<Todolist />} />
         <Route path="api" element={<ApiProducts />} />
         <Route path="blogs" element={<Blogs />} />
+        <Route path="news" element={<News />} />
         {/* <Route path="jpt" element={<h1>Jpt ko page</h1>} /> */}
         <Route path="*" element= {<h1>Page not found</h1>}/>
       </Routes>

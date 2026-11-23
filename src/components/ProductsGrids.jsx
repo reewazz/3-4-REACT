@@ -91,6 +91,8 @@ export default function ProductGrid() {
 
   const numbers = [1,2,3,4,5]
 
+  localStorage.removeItem("name")
+
 
   const totalPrice = numbers.reduce((total, item) => {
     total = total + item;

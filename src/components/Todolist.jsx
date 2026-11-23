@@ -25,7 +25,6 @@ function Todolist() {
         completed: false,
       };
 
-
       const updatedTodo = [...todos, newTodo];
       setTodos(updatedTodo);
     }
