@@ -1,26 +1,59 @@
+import { Loader } from "@mantine/core"
 import { useEffect, useState } from "react"
 
 const News = () => {
 
-    
-
-   
     const [news,setNews] = useState([])
     const [query,setQuery] = useState("nepal")
+    const [loading,setLoading] = useState(false)
+
+
     const getNews = async()=> {
-        const myNews = await fetch(`https://newsapi.org/v2/everything?q=${query}&from=2026-10-23&sortBy=publishedAt&apiKey=8f5d8b4d47cc42c897361fe532cd7c0f`)
-        console.log(myNews,"myNews")
+    try{
+        setLoading(true)
+        const myNews = await fetch(`https://newsapi.org/v2/everything?q=${query}&from=2026-10-25&sortBy=publishedAt&apiKey=8f5d8b4d47cc42c897361fe532cd7c0f`)
+     
         const finalResponse = await myNews.json()
-        console.log(finalResponse,"from api")
+      
         setNews(finalResponse.articles)
+    }
+    catch(err) {
+      console.log(err)
+    }
+    finally{
+        setLoading(false)
+    }
+    
      }
 
      useEffect(()=>{
 getNews()
+fn()
      },[])
 
+
+     const fn = ()=> {
+   try {
+       let a = 5
+       let b = 6
+      let c = a+b
+      console.log(c,"output of c")
+      return c
+   }
+   catch (error) {
+alert(error)
+   }
+   finally {
+    console.log("final statement")
+   }
+
+     }
+
+
   return (
-    <div>
+<>
+{loading ? <div className="flex justify-center"><Loader/></div> : 
+  <div>
 
         <input type="text" className="border border-gray-400" value={query} onChange={(e)=>setQuery(e.target.value)} />
         <button onClick={getNews} className="bg-blue-400">Search News</button>
@@ -41,7 +74,7 @@ getNews()
         </div>
 
         {/* Featured Article */}
-        {news.slice(0, 1).map((item, index) => (
+        {news?.slice(0, 1).map((item, index) => (
           <article
             key={item.url || index}
             className="grid md:grid-cols-2 gap-8 mb-14 group"
@@ -108,7 +141,7 @@ getNews()
         <div className="grid grid-cols-1 sm:grid-cols-2
           lg:grid-cols-3 xl:grid-cols-4 gap-x-7 gap-y-10">
 
-          {news.slice(1).map((item, index) => (
+          {news?.slice(1).map((item, index) => (
             <article
               key={item.url || index}
               className="group cursor-pointer"
@@ -160,6 +193,10 @@ getNews()
       </div>
     </section>
     </div>
+    
+}
+
+   </> 
   )
 }
 

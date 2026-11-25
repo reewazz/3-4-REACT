@@ -43,7 +43,8 @@ localStorage.setItem("user",JSON.stringify(userValue))
 
   // Add Blog Function
   const addBlog = (e) => {
-    e.preventDefault()
+   try{
+     e.preventDefault()
 
 
     if(!editingId) {
@@ -73,6 +74,10 @@ else {
       publishDate: ''
     })
     setShow(false)
+   }
+   catch(err) {
+    console.log(err)
+   }
   }
 
 

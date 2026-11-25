@@ -1,3 +1,5 @@
+import { Modal } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
 import React, { useEffect, useState } from "react";
 
 function ProductCard({ product, onAddToCart }) {
@@ -92,6 +94,7 @@ export default function ProductGrid() {
   const numbers = [1,2,3,4,5]
 
   localStorage.removeItem("name")
+  const [opened, { open, close }] = useDisclosure(false)
 
 
   const totalPrice = numbers.reduce((total, item) => {
@@ -148,10 +151,10 @@ export default function ProductGrid() {
       <div className="mx-auto max-w-7xl">
         <div className="flex justify-between items-center">
           <h1 className="mb-8 text-3xl font-bold text-gray-900">
-          {user.address}
+       Products
           </h1>
           <button
-            onClick={() => setShowForm(true)}
+            onClick={open}
             className="bg-blue-400 px-4 py-1 font-semibold text-white rounded-sm"
           >
             Add Product
@@ -179,10 +182,9 @@ export default function ProductGrid() {
           ))}
         </div>
       </div>
-
-      {showForm && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
-          <div className="w-full max-w-lg rounded-2xl bg-white shadow-2xl">
+ <Modal opened={opened} onClose={close} size={"80%"} >
+         <div className="  flex items-center justify-center p-4">
+          <div className="w-full ">
             {/* Header */}
             <div className="border-b border-gray-200 px-6 py-5">
               <h2 className="text-2xl font-bold text-gray-800">
@@ -293,7 +295,10 @@ export default function ProductGrid() {
             </div>
           </div>
         </div>
-      )}
+      </Modal>
+     
+     
+     
     </section>
   );
 }

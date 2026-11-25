@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
-import Button from "./Button"
 
 function Navbar() {
     return (
         <>
      <nav className="navbar flex gap-6 justify-between  bg-black text-white text-[24px] font-semibold px-20 py-8">
         <h1 className="">Athena</h1>
+      
         <div className="nav-items flex gap-4">
             <Link className="text-xl" to="/">Home</Link>
             <Link className="text-xl" to="athena">Athena</Link>
