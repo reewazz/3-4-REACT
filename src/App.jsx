@@ -19,6 +19,7 @@ import Todolist from "./components/Todolist";
 import ApiProducts from "./pages/ApiProducts";
 import Blogs from "./pages/Blogs";
 import News from "./pages/News";
+import ProductDetail from "./components/ProductDetail";
 
 function App() {
   const users = [
@@ -66,7 +67,8 @@ function App() {
 
 
       <Routes>
-        <Route index element={<ProductGrid />} />
+        <Route index element={<Athena />} />
+        <Route path="products" element={<ProductGrid />} />
         <Route path="athena" element={<Athena />} />
         <Route path="cards" element={<PropsShow />} />
         <Route path="services" element={<Athena />} />
@@ -77,6 +79,8 @@ function App() {
         <Route path="api" element={<ApiProducts />} />
         <Route path="blogs" element={<Blogs />} />
         <Route path="news" element={<News />} />
+        <Route path="products/:id" element = {<ProductDetail/>}/>
+        {/* <Route path="course/:name/:age" element={<Athena />} /> */}
         {/* <Route path="jpt" element={<h1>Jpt ko page</h1>} /> */}
         <Route path="*" element= {<h1>Page not found</h1>}/>
       </Routes>

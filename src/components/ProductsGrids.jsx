@@ -1,10 +1,11 @@
 import { Modal } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function ProductCard({ product, onAddToCart }) {
   return (
-    <div className="overflow-hidden rounded-xl bg-white shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl  hover:bg-black hover:text-white">
+    <Link to={`${product.id}`} className="overflow-hidden rounded-xl bg-white shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl  hover:bg-black hover:text-white">
       <img
         src={product.images[0]}
         alt={product.name}
@@ -45,7 +46,7 @@ function ProductCard({ product, onAddToCart }) {
           Add to Cart
         </button>
       </div>
-    </div>
+    </Link>
   );
 }
 

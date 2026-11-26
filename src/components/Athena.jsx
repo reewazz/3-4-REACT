@@ -1,15 +1,18 @@
 import { PasswordInput, Rating, Select, Text, TextInput } from "@mantine/core"
 import heroImage from "../assets/athena/temple2.png"
 import { useState } from "react"
+import { useParams } from "react-router-dom"
 
 function Athena(){
 
 const [rating,setRating] = useState(4)
+  const {name,age} = useParams()
+
     return (
         <>
         
-
-    <Text size="xs">Extra small text</Text>
+This is course detail page of id : {name} and age : {age}
+    {/* <Text size="xs">Extra small text</Text>
       <Text size="sm">Small text</Text>
       <Text size="md">Default text</Text>
       <Text size="lg">Large text</Text>
@@ -35,7 +38,7 @@ const [rating,setRating] = useState(4)
        clearable
          searchable
     />
-    <Rating value={rating} onChange={setRating}/>
+    <Rating value={rating} onChange={setRating}/> */}
     </>
     )
 }
